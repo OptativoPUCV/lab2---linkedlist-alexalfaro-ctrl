@@ -1,0 +1,10 @@
+Thu 24 Aug 2023 02:54:12 PM UTC: 
+ list.c | 22 +++++++++++++++++++++-
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:56:16: error: ‘List’ {aka ‘struct List’} has no member named ‘actual’
+   56 |     while (list->actual!=NULL){
+      |                ^~
+Compilation failed
+239a3f1
