@@ -8,3 +8,14 @@ list.c:56:16: error: ‘List’ {aka ‘struct List’} has no member named ‘a
       |                ^~
 Compilation failed
 239a3f1
+Thu 24 Aug 2023 04:14:10 PM UTC: 
+ list.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:54:9: error: unused variable ‘actual’ [-Werror=unused-variable]
+   54 |   Node *actual=list->head;
+      |         ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+61980ae
