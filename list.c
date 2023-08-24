@@ -55,22 +55,31 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-  if(list->head!=NULL){
-    Node *current=list->head;
-    while (list->current!=NULL){
-      current=list->current->next;
-      
-    }
-    return list->current->data;
-    
-  }
+  Node *actual = list->head;
+  if (actual == NULL){
     return NULL;
+  }
+  
+  while (actual->next != NULL){
+    actual = actual->next;
+  }
+
+  list->current = actual;
+  //printf("%d",*((int*)list->current->data));
+  return list->current->data;
 }
 
 void * prevList(List * list) {
-  
+  if (list->current==NULL){
     return NULL;
+  }
+  if(list->head !=NULL && list->current->next!=NULL){
+    list->current=list->current->prev;
+    return list->current->data;
+  }
+  return NULL;
 }
+
 
 void pushFront(List * list, void * data) {
 }

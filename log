@@ -131,3 +131,9 @@ list.c:59:11: error: variable ‘current’ set but not used [-Werror=unused-but
 cc1: all warnings being treated as errors
 Compilation failed
 9e6218e
+Thu 24 Aug 2023 07:16:27 PM UTC: 
+ list.c | 25 +++++++++++++++++--------
+ 1 file changed, 17 insertions(+), 8 deletions(-)
+ tests:  6|4
+total_score: 25/70
+9e29497
