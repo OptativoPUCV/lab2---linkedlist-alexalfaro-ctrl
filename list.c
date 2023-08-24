@@ -89,10 +89,10 @@ void pushFront(List * list, void * data) {
     list->tail=temp;
   }else{
     list->head->prev=temp;
+    temp->next=list->head;
     list->head=temp;
     
   }
-  
   
 }
 
