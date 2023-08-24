@@ -109,3 +109,14 @@ Thu 24 Aug 2023 06:46:13 PM UTC:
  1 file changed, 1 insertion(+)
  tests:  0|0
 904d185
+Thu 24 Aug 2023 06:48:39 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:59:11: error: unused variable ‘current’ [-Werror=unused-variable]
+   59 |     Node *current=list->head;
+      |           ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c1b4abf
