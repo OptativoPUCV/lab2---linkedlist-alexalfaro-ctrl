@@ -56,16 +56,14 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
   Node *actual = list->head;
-  if (actual == NULL){
+  if (list->head == NULL){
     return NULL;
   }
   
   while (actual->next != NULL){
     actual = actual->next;
   }
-
   list->current = actual;
-  //printf("%d",*((int*)list->current->data));
   return list->current->data;
 }
 
