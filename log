@@ -120,3 +120,14 @@ list.c:59:11: error: unused variable ‘current’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c1b4abf
+Thu 24 Aug 2023 06:49:02 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:59:11: error: variable ‘current’ set but not used [-Werror=unused-but-set-variable]
+   59 |     Node *current=list->head;
+      |           ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9e6218e
