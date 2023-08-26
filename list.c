@@ -102,23 +102,23 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data){
-  if(list){
-    return;
+  if (!list) {
+    return;  // Retorna si la lista es nula
   }
-  Node *temp=createNode(data);
-  if(list->head==NULL){
-    list->head=temp;
-    list->tail=temp;
-    list->current=temp;
-  }
-  if(list->current->next==NULL){
-    list->current->next=temp;
-    temp->prev=list->current;
-  }
-  if(list->current->next!=NULL || list->current->prev!=NULL){
-    temp->next=list->current->next;
-    temp->prev=list->current;
-    list->current->next->prev=temp;
+  
+  Node *temp = createNode(data);
+  
+  if (!list->head) {
+    list->head = temp;
+    list->tail = temp;
+    list->current = temp;
+  } else if (!list->current->next) {
+    list->current->next = temp;
+    temp->prev = list->current;
+  } else {
+    temp->next = list->current->next;
+    temp->prev = list->current;
+    list->current->next->prev = temp;
     list->current->next = temp;
   }
 }
