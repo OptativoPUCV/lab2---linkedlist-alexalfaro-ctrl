@@ -102,7 +102,6 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data){
-void pushCurrent(List *list, void *data) {
   if (!list) {
     return;  // Retorna si la lista es nula
   }
