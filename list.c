@@ -102,6 +102,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data){
+void pushCurrent(List *list, void *data) {
   if (!list) {
     return;  // Retorna si la lista es nula
   }
@@ -115,6 +116,7 @@ void pushCurrent(List * list, void * data){
   } else if (!list->current->next) {
     list->current->next = temp;
     temp->prev = list->current;
+    list->tail = temp;  // Actualiza el tail si se agrega al final
   } else {
     temp->next = list->current->next;
     temp->prev = list->current;
