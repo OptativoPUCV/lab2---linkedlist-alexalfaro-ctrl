@@ -108,11 +108,11 @@ void pushCurrent(List * list, void * data){
   
   Node *temp = createNode(data);
   
-  if (list->head==NULL) {
+  if (!list->head) {
     list->head = temp;
     list->tail = temp;
     list->current = temp;
-  } else if (list->current->next!=NULL) {
+  } else if (!list->current->next) {
     list->current->next = temp;
     temp->prev = list->current;
     list->tail = temp;  // Actualiza el tail si se agrega al final
