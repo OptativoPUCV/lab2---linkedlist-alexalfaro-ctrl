@@ -139,14 +139,14 @@ void * popCurrent(List * list) {
       Node *eliminar = list->current;
       void* data = eliminar->data;
       if (eliminar->prev !=NULL){
-          eliminar->prev->next= eliminar->next;
-      }else{
         list->head = eliminar->next;
-      }
-      if (eliminar->next!=NULL){
-        eliminar->next->prev=eliminar->prev;
       }else{
+        eliminar->prev->next= eliminar->next;
+      }
+      if (eliminar->next==NULL){
         list->tail =eliminar->prev;
+      }else{
+        eliminar->next->prev=eliminar->prev;
       }
       list->current=eliminar->next;
       free(eliminar);
